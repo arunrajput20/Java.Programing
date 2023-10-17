@@ -1,22 +1,16 @@
- class Animal{
-     public void eat(){
-         System.out.println(" I CAN EAT");
-     }
- }
-     class Dog extends Animal{
-         public void eat(){
-             super .eat();
-             System.out.println(" i eat dog food");
-         }
-     public void bark(){
-         System.out.println("i can bark");
-     }
-     }
-     class Main{
-         public static void main(String[]args){
-             Animal dog = new Dog();
-             dog.eat();
-             
-         }
-     }
-
+import java.util.Scanner;
+public class Main{
+    public static void main (String[]args){
+        Scanner scn = new Scanner(System.in);
+        try
+        {
+            int n = Integer.parseInt(scn.nextLine());
+            if(99%n== 0)
+            System.out.println(n + " is a factor 99");
+        }
+        catch (NumberFormatException | ArithmeticException ex)
+        {
+            System.out.println("Exception encountered"+ex.getMessage());
+        }
+    }
+}
