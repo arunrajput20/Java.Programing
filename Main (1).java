@@ -1,16 +1,14 @@
- class Animal{
-     public int legCount;
-     public void display()
-     {
-     System.out.println("i am an animal.");
-     System.out.println("i have" + legCount + "legs.");
- }
- }
-public class Main{
-	public static void main(String[] args) {
-	    Animal animal = new Animal();
-	    animal.legCount = 4;
-	    animal.display();
-		
-	}
+// finally block
+class Main{
+    public static void main(String[]args){
+        try{
+            int d = 5/0;
+        }
+        catch(ArithmeticException e){
+            System.out.println("ArithmeticException=>" + e.getMessage());
+        }
+        finally{
+            System.out.println("This is the finally block");
+        }
+    }
 }
